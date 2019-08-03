@@ -1,0 +1,65 @@
+<div class="bdr">
+  <h1>Student Object Fields</h1>
+  <form name="fields">
+    <div>
+      <label>
+        First Name:
+      </label>
+      <input name="firstName" type="text" [(ngModel)]="firstName">
+    </div>
+    <div>
+      <label>
+        Last Name:
+      </label>
+      <input name="lastName" type="text" [(ngModel)]="lastName">
+    </div>
+    <div>
+      <label>
+        Mobile Number:
+      </label>
+      <input type="text" maxlength="10" name="mobileNumber" [(ngModel)]="mobileNumber">
+    </div>
+    <div>
+      <label>
+        Email:
+      </label>
+      <input type="Email" name="emailId" [(ngModel)]="emailId">
+    </div>
+    <div>
+      <label>
+        Gender:
+      </label>
+      <div>
+        <select name="value" [(ngModel)]="value">
+          <option type="radio" *ngFor="let value of values">{{value}}</option>
+        </select>
+      </div>
+    </div>
+    <div>
+      <label>
+        Address:
+      </label>
+      <textarea name="address" [(ngModel)]="address"></textarea>
+    </div>
+    <div>
+      <label>
+        Country:
+      </label>
+      <select name="country" [(ngModel)]="country">
+        <option *ngFor="let country of countries">{{country}}</option>
+      </select>
+    </div>
+    <div>
+      <label>
+        List Time:
+      </label>
+      <select name="time" [(ngModel)]="time">
+        <option *ngFor="let time of times">{{time}}</option>
+      </select>
+    </div>
+    <div>
+      <button (click)="add()">Add</button>
+      <button (click)="delete()">Delete</button>
+    </div>
+  </form>
+</div>
